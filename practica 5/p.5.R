@@ -87,6 +87,29 @@ sd(numArtefactos_int)
 sqrt(var(numArtefactos_int))
 
 #Ejercicio 12 
+hist(numArtefactos, main="Gráfico de dispersión horizontal/'numArtefactos_int'", ylab="Frecuencia", xlim=c(0, 120), col="red")
 
+#Ejercicio 13
+vector3 <- c(21, 45, 33, 98, 34, 90, 67, 87, 45, 11, 73, 38, 28, 15, 50, 57, 12, 87, 29, 1)
 
+#Ejercicio 14
+
+#Función 1
+#Calculando coeficiente de variación para numArtefactos_int
+coefVariacion_na <- sd(numArtefactos)/mean(numArtefactos)
+coefVariacion_na
+-----------------------------------
+  #Calculando coeficiente de variación para vector3
+  coefVariacion_v3 <- sd(vector3)/mean(vector3)
+coefVariacion_v3
+------------------------------------
+  #Función 2
+  #Calculando coeficiente de variación para numArtefactos_int
+  coefVariacion_na2 <- IQR(numArtefactos)/mean(numArtefactos)
+coefVariacion_na2
+#Calculando coeficiente de variación para vector3
+coefVariacion_v32 <- IQR(vector3)/mean(vector3)
+coefVariacion_v32
+
+#Ejercicio 15
 
