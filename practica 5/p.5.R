@@ -38,33 +38,24 @@ ej1 <- c(17, 54, 10, 34, 90, 33, 49, 82, 12, 23, 56, 78, 44, 102, 10, 53, 4, 28,
 mean(ej1) 
 
 #Ejercicio 4
-length(ej1)
+moda <- function(numArtefactos_int) {
+  u <- unique(numArtefactos_int)
+  tab <- tabulate(match(numArtefactos_int, u))
+  u[tab == max(tab)]}
 
-sort(ej1)[56]
-
-sort(ej1)[78]
-
-median(ej1)
+moda(numArtefactos_int) 
 
 #Ejercicio 5
 table(numArtefactos)
 
 #Ejercicio 6
 
-numArtefactos_int <- as.integer(numArtefactos)
+quantile(numArtefactos_int)
+quantile(numArtefactos_int)
 
-Q1 <- quantile(numArtefactos_int, 0.25)
-Q2 <- quantile(numArtefactos_int, 0.5)
-Q3 <- quantile(numArtefactos_int, 0.75)
 
 #Ejercicio 7
-Q1 = median(numArtefactos[numArtefactos < median(numArtefactos)])
-Q1
-Q3 = median(numArtefactos[numArtefactos > median(numArtefactos)])
-Q3
-
-#Rango intercuartílico
-20 - 67
+IQR(numArtefactos_int)
 
 #Ejercicio 8 
 rango_artefactos <- range(numArtefactos)
@@ -113,3 +104,28 @@ coefVariacion_v32
 
 #Ejercicio 15
 
+
+
+
+#Ejercicio 16
+coeficiente_asimetria <- (mean(vector3) - median(vector3)) / sd(vector3)
+coeficiente_asimetria
+------------------------------
+#Distribucioon de Asimetria Positiva 
+ vector1 <- c(2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,150)
+ coeficiente_asimetria <- (mean(vector1) - median(vector1)) / sd(vector1)
+coeficiente_asimetria
+
+#Distribución con asimetría negativa:
+  vector2 <- c(150,20,19,18,17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2)
+coeficiente_asimetria <- (mean(vector2) - median(vector2)) / sd(vector2)
+coeficiente_asimetria
+
+#Distribución simétrica:
+  vector4 <- c(2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,20)
+coeficiente_asimetria <- (mean(vector4) - median(vector4)) / sd(vector4)
+coeficiente_asimetria
+
+#Ejercicio17
+kurtosis(vector3)
+library(e1071)
