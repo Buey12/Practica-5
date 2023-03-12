@@ -82,9 +82,8 @@ coefVariacion_v32 <- IQR(vector3)/mean(vector3)
 coefVariacion_v32
 
 #Ejercicio 15
-
-
-
+summary(vector3)
+summary(numArtefactos)
 
 #Ejercicio 16
 coeficiente_asimetria <- (mean(vector3) - median(vector3)) / sd(vector3)
