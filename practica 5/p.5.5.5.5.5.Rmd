@@ -1,0 +1,25 @@
+---
+title: "Practica 5"
+output:
+  html_document:
+    df_print: paged
+---
+##Ejercicio1
+
+
+
+##Ejercicio 2
+
+La correlación lineal se considera una prueba de correlación paramétrica porque se basa en la asunción de que los datos son distribuidos normalmente. Esto significa que los datos se suponen que tienen una distribución de media cero y una varianza constante. Esta prueba asume que los datos sean homogéneos y estadísticamente independientes.
+
+Las pruebas paramétricas se basan en la asunción de que los datos siguen una distribución normal conocida con una media y una varianza conocidas. Esto permite a los investigadores calcular los parámetros de la distribución y realizar inferencias acerca de los resultados. Las pruebas no paramétricas, por otro lado, no asumen ninguna distribución particular para los datos y se pueden usar para datos desiguales o no distribuidos normalmente. Estas pruebas no requieren ninguna asunción de distribución y por lo tanto son más flexibles. Sin embargo, estas pruebas son menos precisas que las pruebas paramétricas, ya que no permiten realizar inferencias sobre los parámetros de la distribución.
+
+##Ejercicio 3
+
+```{r}
+
+
+```
+
+
+
