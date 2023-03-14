@@ -4,7 +4,10 @@
 
 
 3
-round(cor(base),2)  
+round(cor(data),2)  
+
+4
+
 
 
 
