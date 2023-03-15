@@ -1,9 +1,9 @@
 ---
 title: "Practica 5"
 output:
-  pdf_document: default
   html_document:
     df_print: paged
+  pdf_document: default
 ---
 ##Ejercicio1
 ```{r}
@@ -125,8 +125,13 @@ Un ejemplo de la prueba de correlación de Spearman en R puede ser el siguiente:
 
 # Crear una muestra de datos
 
+```{r}
+
 x <- c(1, 5, 10, 15, 20)
 y <- c(3, 7, 12, 17, 24)
+```
+
+
 
 # Calcular la correlación de Spearman
 cor.test(x, y, method = "spearman")
