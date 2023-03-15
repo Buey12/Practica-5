@@ -107,3 +107,5 @@ coeficiente_asimetria
 #Ejercicio17
 kurtosis(vector3)
 library(e1071)
+
+
