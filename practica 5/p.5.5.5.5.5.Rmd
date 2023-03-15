@@ -3,8 +3,25 @@ title: "Practica 5"
 output:
   html_document:
     df_print: paged
+  pdf_document: default
 ---
 ##Ejercicio1
+```{r}
+set.seed (1)
+
+z = rnorm (100)
+x = rpois (100,10.3)
+y = rbinom (100, 1, .25)
+
+y1 = 5*z+x*10+rnorm (100,2,1)
+y2 = 5*z+x*12+rnorm (100,2,1)
+
+hist (y1)
+hist (y2)
+
+t.test (y1)
+t.test (y2)
+```
 
 
 
@@ -17,9 +34,103 @@ Las pruebas paramétricas se basan en la asunción de que los datos siguen una d
 ##Ejercicio 3
 
 ```{r}
+library(correlation)
+resultados = correlation(data)
+resultados
+```
+
+##Ejercicio 4
+
+```{r}
+plot(resultados)
+```
+
+##Ejercicio 5
+```{r}
+cor.test(data$longitud, data$ancho)
+cor.test(data$grosor, data$peso) 
+```
+##Ejercicio 6
+```{r}
+plot(data$longitud, data$peso, pch = 19, col = "purple")
+
+# Línea de regresión
+abline(lm(data$peso ~ data$longitud), col = "blue", lwd = 3)
+
+# Correlación de Pearson
+text(paste("Correlación:", round(cor(data$peso, data$longitud), 2)), x = 25, y = 95)
 
 
 ```
 
+
+
+##Ejercicio 7
+```{r}
+install.packages(corrplot)
+library(corrplot)
+corrplot(cor(data))
+
+```
+
+##Ejercicio 8
+```{r}
+distancia <- c(1.1,100.2,90.3,5.4,57.5,6.6,34.7,65.8,57.9,86.1)
+n_piezas <- c(110,2,6,98,40,94,31,5,8,10)
+
+#2e
+correlacion <- cor(distancia, n_piezas)
+print(correlacion)
+
+#3e
+
+prueba_correlacion <- cor.test(distancia, n_piezas)
+
+df1 = data.frame(distancia, n_piezas)
+correlation::correlation(df1)
+
+#es isgnificativa y lineal interna.
+
+#4
+
+
+
+
+```
+
+
+
+
+
+
+##Ejercicio 9
+
+Una relación lineal entre dos variables significa que existe una relación entre las dos variables de tal forma que una sube o baja de manera proporcional a la otra. Un ejemplo en R sería el siguiente:
+
+x <- c(1,2,3,4,5,6)
+y <- c(2,4,6,8,10,12)
+
+plot(x,y)
+
+Esto generaría un gráfico que muestra una relación lineal entre x e y, donde cada punto de x se corresponde con su valor doble en y.
+
+Por otro lado, una relación monótona entre dos variables significa que existe una relación entre las dos variables de tal forma que una sube o baja de manera constante, sin embargo, no necesariamente es lineal. Un ejemplo en R sería el siguiente:
+
+x <- c(1,2,3,4,
+
+##Ejercicio 10 
+La prueba de correlación que se aplica a variables que experimentan una relación monótona es la correlación de Spearman. Esta prueba mide la correlación entre dos variables ordinales, es decir, variables que están en una escala ordinal donde los datos son comparados en términos de su posición relativa.
+
+Un ejemplo de la prueba de correlación de Spearman en R puede ser el siguiente:
+
+# Crear una muestra de datos
+
+x <- c(1, 5, 10, 15, 20)
+y <- c(3, 7, 12, 17, 24)
+
+# Calcular la correlación de Spearman
+cor.test(x, y, method = "spearman")
+
+El resultado de esta prueba es un valor de correlación de 0.98, lo que indica una fuerte correlación monótona entre las dos variables.
 
 
