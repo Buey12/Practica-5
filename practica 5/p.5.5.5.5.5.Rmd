@@ -34,10 +34,24 @@ Las pruebas paramétricas se basan en la asunción de que los datos siguen una d
 ##Ejercicio 3
 
 ```{r}
+names(correlacion)<- c("Parameter1", "Parameter2")
+length(correlacion) <- 2
+
+
 library(correlation)
 resultados = correlation(data)
 resultados
 ```
+
+#intente arreglar el problema que tenia, que no me deja pasarlo a html ni a pdf he intentado arreglarlo con esta función:
+```{r}
+names(correlacion)<- c("Parameter1", "Parameter2")
+length(correlacion) <- 2
+```
+
+pero tampoco... no se que hacer asi que te lo paso asi. disculpe las molestias.
+
+
 
 ##Ejercicio 4
 
