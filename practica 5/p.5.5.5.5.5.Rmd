@@ -159,7 +159,9 @@ y <- c(3, 7, 12, 17, 24)
 ```
 
 # Calcular la correlación de Spearman
+```{r}
 cor.test(x, y, method = "spearman")
+```
 
 El resultado de esta prueba es un valor de correlación de 0.98, lo que indica una fuerte correlación monótona entre las dos variables.
 
